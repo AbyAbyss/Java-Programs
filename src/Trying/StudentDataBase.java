@@ -4,24 +4,19 @@ public class StudentDataBase {
 
 	public static void main(String[] args) {
 		Student stu1 = new Student("Aby", "123456789");
-		//Student stu2 = new Student("Sanju", "987654321");
-		//Student stu3 = new Student("Sanju", "987654321");
-		
 		stu1.enroll("Math1");
 		stu1.enroll("English");
-		stu1.checkBalance();
+		//stu1.checkBalance();
 		stu1.showCourse();
 		System.out.println(stu1.toString());
-		
 		
 		
 		Student stu2 = new Student("Sanju", "987654321");
 		stu2.enroll("CSS");
 		stu2.enroll("HTML");
-		stu2.checkBalance();
+		//stu2.checkBalance();
 		stu2.showCourse();
 		System.out.println(stu2.toString());
-		
 	}
 
 }
@@ -68,14 +63,14 @@ class Student{
 		ID++;
 		this.name = name;
 		this.ssn = ssn;
-		System.out.println("Name: " + name + "\nssn: " + ssn);
+		//System.out.println("Name: " + name + "\nssn: " + ssn);
 		setEmail();
 		setUserId();
 	}
 	
 	private void setEmail(){
 		email = name.toLowerCase()+ "." + ID + "@email.com";
-		System.out.println(email);
+		//System.out.println(email);
 	}
 	
 	private void setUserId(){
@@ -83,32 +78,29 @@ class Student{
 		int random = (int) (Math.random() * (max - min));
 		random = random + min;
 		userId = ID + "" + random + ssn.substring(5);
-		System.out.println(userId);
+		//System.out.println("UserID: "userId);
 	}
 	
-	public void enroll(String course){
-		this.course = this.course +"\n" +course; 
-		numberOfCourses++;
-		balance = balance + bill;
-	}
-	public void payBill(int amount){
-		balance = balance - amount;
-	}
+public void enroll(String course){
+	this.course = this.course + course + "\n"; 
+	numberOfCourses++;
+	balance = balance + bill;
+}
+public void payBill(int amount){
+	balance = balance - amount;
+}
 	
 public void checkBalance(){
 	System.out.println("Balance: $" + balance);
 }
 
 public void showCourse(){
-	System.out.println(course);
-	
+	System.out.println("Courses: \n" + course);
 }
 
 @Override
 public String toString(){
-	return "[ Name: " + name + " ]\n[ Email: " + email + " ]\n[ ID: " + ID + " ]\n[ UserID: " + userId + " ]\n[ SSN: " + ssn + " ]\n[ Total Courses: " + numberOfCourses + " ]\n[ Total Cost: " + balance + " ]";
+	return "[ Name: " + name + " ]\n[ Email: " + email + " ]\n[ ID: " + ID + " ]\n[ UserID: " + userId + " ]\n[ SSN: " + ssn + " ]\n[ Total Courses: " + numberOfCourses + " ]\n[ Total Cost: " + balance + " ]\n\n";
 }
 
-
-	
 }
