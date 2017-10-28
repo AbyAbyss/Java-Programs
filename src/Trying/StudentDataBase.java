@@ -81,26 +81,26 @@ class Student{
 		//System.out.println("UserID: "userId);
 	}
 	
-public void enroll(String course){
-	this.course = this.course + course + "\n"; 
-	numberOfCourses++;
-	balance = balance + bill;
-}
-public void payBill(int amount){
-	balance = balance - amount;
-}
+	public void enroll(String course){
+		this.course = this.course + course + "\n"; 
+		numberOfCourses++;
+		balance = balance + bill;
+	}
+	public void payBill(int amount){
+		balance = balance - amount;
+	}
 	
-public void checkBalance(){
-	System.out.println("Balance: $" + balance);
-}
+	public void checkBalance(){
+		System.out.println("Balance: $" + balance);
+	}
 
-public void showCourse(){
-	System.out.println("Courses: \n" + course);
-}
+	public void showCourse(){
+		System.out.println("Courses: \n" + course);
+	}
 
-@Override
-public String toString(){
-	return "[ Name: " + name + " ]\n[ Email: " + email + " ]\n[ ID: " + ID + " ]\n[ UserID: " + userId + " ]\n[ SSN: " + ssn + " ]\n[ Total Courses: " + numberOfCourses + " ]\n[ Total Cost: " + balance + " ]\n\n";
-}
+	@Override
+	public String toString(){
+		return "[ Name: " + name + " ]\n[ Email: " + email + " ]\n[ ID: " + ID + " ]\n[ UserID: " + userId + " ]\n[ SSN: " + ssn + " ]\n[ Total Courses: " + numberOfCourses + " ]\n[ Total Cost: " + balance + " ]\n\n";
+	}
 
 }
