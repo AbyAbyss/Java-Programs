@@ -4,8 +4,7 @@ public class BankAccountApp {
 
 	public static void main(String[] args) {
 		BankAccount acc1 = new BankAccount("111121444", 1000);
-		BankAccount acc2 = new BankAccount("211222444", 2000);
-		BankAccount acc3 = new BankAccount("31323444", 3000);
+		//BankAccount acc3 = new BankAccount("31323444", 3000);
 		//System.out.println(acc3.ID);  
 		
 		acc1.setName("AbyAbyss");
